@@ -1,14 +1,8 @@
 import { Button, Menu, Layout } from "antd";
 import { useLocation, useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from "react";
-
-import {
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
-  UploadOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-} from "@ant-design/icons";
+import { BiSolidDrink } from "react-icons/bi";
+import { MenuFoldOutlined, MenuUnfoldOutlined } from "@ant-design/icons";
 
 const { Header, Content, Sider } = Layout;
 type Props = {
@@ -45,18 +39,8 @@ const LayoutFC: React.FC<Props> = ({ children }) => {
           items={[
             {
               key: path.product,
-              icon: <UserOutlined />,
+              icon: <BiSolidDrink />,
               label: "Sản phẩm",
-            },
-            {
-              key: path.page,
-              icon: <VideoCameraOutlined />,
-              label: "nav 2",
-            },
-            {
-              key: "3",
-              icon: <UploadOutlined />,
-              label: "nav 3",
             },
           ]}
         />
@@ -76,9 +60,10 @@ const LayoutFC: React.FC<Props> = ({ children }) => {
         </Header>
         <Content
           style={{
-            margin: "24px 16px",
-
-            minHeight: 280,
+            padding: "24px 16px",
+            overflow: "hidden",
+            // overflowY: "scroll",
+            height: "100vh",
           }}
         >
           {children}

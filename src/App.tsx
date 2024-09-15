@@ -14,6 +14,10 @@ function App() {
             /* here is your component tokens */
             siderBg: "white",
           },
+          Collapse: {
+            /* here is your component tokens */
+            headerBg: "#fafafa",
+          },
         },
       }}
     >
